@@ -3,25 +3,25 @@
     <v-toolbar app>
       <v-toolbar-title class="headline">
         <span>NiceDrive</span>
-        <span class="font-weight-light ml-3">Driver UI</span>
+        <span class="font-weight-light ml-3">Manager UI</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <span class="mr-2">IDF</span>
     </v-toolbar>
 
     <v-content>
-      <DriverForm/>
+      <DataTable/>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import DriverForm from './components/DriverForm.vue'
+import DataTable from './components/DataTable.vue'
 
 export default {
   name: 'App',
   components: {
-    DriverForm
+    DataTable
   },
   data () {
     return {
