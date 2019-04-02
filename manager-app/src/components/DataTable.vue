@@ -1,16 +1,16 @@
 <template>
   <v-data-table
     :headers="headers"
-    :items="desserts"
+    :items="trips"
     class="elevation-1"
   >
     <template v-slot:items="props">
-      <td>{{ props.item.name }}</td>
-      <td class="text-xs-right">{{ props.item.calories }}</td>
-      <td class="text-xs-right">{{ props.item.fat }}</td>
-      <td class="text-xs-right">{{ props.item.carbs }}</td>
-      <td class="text-xs-right">{{ props.item.protein }}</td>
-      <td class="text-xs-right">{{ props.item.iron }}</td>
+      <td>{{ props.item.driverId }}</td>
+      <td>{{ props.item.driverName }}</td>
+      <td>{{ props.item.carId }}</td>
+      <td>{{ props.item.water }}</td>
+      <td>{{ props.item.oil }}</td>
+      <td>{{ props.item.tilePressure }}</td>
     </template>
   </v-data-table>
 </template>
@@ -20,99 +20,62 @@
     data () {
       return {
         headers: [
-          {
-            text: 'Dessert (100g serving)',
-            align: 'left',
-            sortable: false,
-            value: 'name'
-          },
-          { text: 'Calories', value: 'calories' },
-          { text: 'Fat (g)', value: 'fat' },
-          { text: 'Carbs (g)', value: 'carbs' },
-          { text: 'Protein (g)', value: 'protein' },
-          { text: 'Iron (%)', value: 'iron' }
+          { text: 'Driver ID', value: 'driverId' },
+          { text: 'Driver Name', value: 'driverName' },
+          { text: 'Car ID', value: 'carId' },
+          { text: 'Water', value: 'water' },
+          { text: 'Oil', value: 'oil' },
+          { text: 'Tile pressure', value: 'tilePressure' }
         ],
-        desserts: [
+        trips: [
           {
-            name: 'Frozen Yogurt',
-            calories: 159,
-            fat: 6.0,
-            carbs: 24,
-            protein: 4.0,
-            iron: '1%'
+            driverId: '8102394',
+            driverName: 'David Gershon',
+            carId: '3294752',
+            water: true,
+            oil: false,
+            tilePressure: '36.2'
           },
           {
-            name: 'Ice cream sandwich',
-            calories: 237,
-            fat: 9.0,
-            carbs: 37,
-            protein: 4.3,
-            iron: '1%'
+            driverId: '8475974',
+            driverName: 'David Ramon',
+            carId: '4356439',
+            water: true,
+            oil: false,
+            tilePressure: '15.2'
           },
           {
-            name: 'Eclair',
-            calories: 262,
-            fat: 16.0,
-            carbs: 23,
-            protein: 6.0,
-            iron: '7%'
+            driverId: '5004354',
+            driverName: 'Ophir Elias',
+            carId: '23434534',
+            water: true,
+            oil: false,
+            tilePressure: '12.2'
           },
           {
-            name: 'Cupcake',
-            calories: 305,
-            fat: 3.7,
-            carbs: 67,
-            protein: 4.3,
-            iron: '8%'
+            driverId: '7003943',
+            driverName: 'Yuval Shpigel',
+            carId: '9774359',
+            water: true,
+            oil: false,
+            tilePressure: '30.2'
           },
           {
-            name: 'Gingerbread',
-            calories: 356,
-            fat: 16.0,
-            carbs: 49,
-            protein: 3.9,
-            iron: '16%'
+            driverId: '7546382',
+            driverName: 'Dani Neemani',
+            carId: '8582784',
+            water: false,
+            oil: false,
+            tilePressure: '4.2'
           },
           {
-            name: 'Jelly bean',
-            calories: 375,
-            fat: 0.0,
-            carbs: 94,
-            protein: 0.0,
-            iron: '0%'
+            driverId: '8000021',
+            driverName: 'David Gershon',
+            carId: '8574893',
+            water: true,
+            oil: true,
+            tilePressure: '11.2'
           },
-          {
-            name: 'Lollipop',
-            calories: 392,
-            fat: 0.2,
-            carbs: 98,
-            protein: 0,
-            iron: '2%'
-          },
-          {
-            name: 'Honeycomb',
-            calories: 408,
-            fat: 3.2,
-            carbs: 87,
-            protein: 6.5,
-            iron: '45%'
-          },
-          {
-            name: 'Donut',
-            calories: 452,
-            fat: 25.0,
-            carbs: 51,
-            protein: 4.9,
-            iron: '22%'
-          },
-          {
-            name: 'KitKat',
-            calories: 518,
-            fat: 26.0,
-            carbs: 65,
-            protein: 7,
-            iron: '6%'
-          }
         ]
       }
     }
